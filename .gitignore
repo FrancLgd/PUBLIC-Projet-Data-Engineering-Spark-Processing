@@ -1,4 +1,4 @@
 data/*
 !data/files_to_transfer.tsv
-!data/files_to_transfer.tsv
+!data/extracted_20191020_20191105_n1000.csv
 .ipynb_checkpoints

@@ -132,15 +132,6 @@ gcloud dataproc jobs submit pyspark \
     -- \
     --DATE_START "2019-10-20 00:00:00" \
     --DATE_END "2019-11-05 23:00:00"
-
-
-gcloud dataproc jobs submit pyspark \
-    --cluster main-cluster \
-    --region europe-west1 \
-    ./src/extract_helper.py \
-    -- \
-    --DATE_START "2019-10-20 00:00:00" \
-    --DATE_END "2019-10-20 23:00:00"
 ```
 
 Après environ 40min de traitement sur le cluster, le job se termine correctement :
@@ -151,4 +142,4 @@ Et le fichier csv souhaité est bien présent dans notre bucket :
 
 <img src="./images/capture_storage.png" alt="Texte alternatif">
 
-Un exemple de fichier de sortie obtenue avec le script (sortie générée sur une période plus réduite pour des raisons de stockage limité sur le dépôt Git) est fournie avec `./data/`
+Le fichier `./data/extracted_20191020_20191105_n1000.csv` représente une extraction des 1000 premières lignes de ce fichier.
